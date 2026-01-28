@@ -12,6 +12,7 @@ int main() {
         sum += arr[i];
     }
     
+    std::cout << std::endl;
     std::cout << "\nSum: "<< sum;
     std::cout << "\nAverage: " << sum / 10;
     
@@ -20,30 +21,49 @@ int main() {
         secondLargest = arr[0];
     }
     
-    else{
+    else {
         largest = arr[0];
         secondLargest = arr[1];
     }
     
     for(int i = 2; i < 10; i++) {
-        if (arr[i] > largest) {
+        if(arr[i] > largest) {
             secondLargest = largest;
             largest = arr[i];
         }
-        else if (arr[i] > secondLargest && arr[i] != largest) {
+        else if(arr[i] > secondLargest && arr[i] != largest) {
             secondLargest = arr[i];
       }
     }
     
     std::cout << "\nSecond Largest: " << secondLargest;
     
+    if(arr[0] > arr[1]) {
+        smallest = arr[1];
+        secondSmallest = arr[0];
+    }
+    
+    else {
+        smallest = arr[0];
+        secondSmallest = arr[1];
+    }
+    
+    for(int i = 2; i < 10; i++) {
+        if(arr[i] < smallest) {
+            secondSmallest = smallest;
+            smallest = arr[i];
+        }
+        else if(arr[i] < secondSmallest && arr[i] != smallest) {
+            secondSmallest = arr[i];
+        }
+    }
+    
+    std:: cout << "\nSecond Smallest: " << secondSmallest;
+    
     std::cout << "\nReversed Array: ";
     for(int i = 9; i >= 0; i--){
         std::cout << arr[i] << " ";
     }
     
-    
-    
-
-    return -1;
+    return 0;
 }
