@@ -43,7 +43,7 @@ int main() {
             else if(pixel_art[i][j] == 'P') {
                 std::cout << "/ ";
             }
-            else{
+            else {
                 std::cout << "  ";
             }
         }
