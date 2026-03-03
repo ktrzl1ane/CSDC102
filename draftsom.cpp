@@ -54,7 +54,9 @@ void userMenu(vector<string>& menuItems,
         cout << "1. View Menu" << endl;
         cout << "2. Add Item to Receipt" << endl;
         cout << "3. View Receipt / Checkout" << endl;
-        cout << "4. Exit" << endl;
+        cout << "4. Clear Receipt" << endl;
+        cout << "5. Remove Item from Receipt" << endl;
+        cout << "6. Exit" << endl;
         cout << "Enter choice: ";
         cin >> choice;
         
@@ -145,10 +147,23 @@ void userMenu(vector<string>& menuItems,
                  }
             }
         }
+        
+        else if(choice == 4) {
+            
+            if(receiptItems.empty()) {
+                cout << "Receipt is already empty.\n";
+            }
+            
+            else {
+                receiptItems.clear();
+                receiptPrices.clear();
+                cout << "Receipt cleared successfully.\n";
+            }
+        }
 
         cout << endl;
         
-    } while(choice != 4);
+    } while(choice != 6);
     
 }
 
