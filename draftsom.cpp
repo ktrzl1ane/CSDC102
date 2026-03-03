@@ -263,6 +263,7 @@ void adminMenu(vector<string>& menuItems,
             cin >> newPrice;
             menuItems.push_back(newItem);
             menuPrices.push_back(newPrice);
+            cout << "Item added successfully.\n";
 		}
 		
 		//Task 3:
@@ -369,4 +370,3 @@ int main() {
 	}
 	return 0;
 }
-
