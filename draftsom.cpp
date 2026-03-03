@@ -265,6 +265,7 @@ void adminMenu(vector<string>& menuItems,
             menuPrices.push_back(newPrice);
 		}
 		
+		//Task 3:
 		else if(choice == 3) {
 		    
 		    string currPass, newPass;
